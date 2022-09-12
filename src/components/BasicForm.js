@@ -68,40 +68,42 @@ const BasicForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className={fNameInputClasses}>
-        <label htmlFor="name">First Name</label>
-        <input
-          type="text"
-          id="name"
-          onChange={fNameChangeHandler}
-          onBlur={fNameBlurHandler}
-          value={fNameValue}
-        />
-        {fNameHasError && <p className="error-text">Invalid name input.</p>}
-      </div>
-      <div className={lNameInputClasses}>
-        <label htmlFor="name">Last Name</label>
-        <input
-          type="text"
-          id="name"
-          onChange={lNameChangeHandler}
-          onBlur={lNameBlurHandler}
-          value={lNameValue}
-        />
-        {lNameHasError && <p className="error-text">Invalid name input.</p>}
+      <div className="form-group">
+        <div className={fNameInputClasses}>
+          <label htmlFor="name">First Name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={fNameChangeHandler}
+            onBlur={fNameBlurHandler}
+            value={fNameValue}
+          />
+          {fNameHasError && <p className="error-text">Invalid name input.</p>}
+        </div>
+        <div className={lNameInputClasses}>
+          <label htmlFor="name">Last Name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={lNameChangeHandler}
+            onBlur={lNameBlurHandler}
+            value={lNameValue}
+          />
+          {lNameHasError && <p className="error-text">Invalid name input.</p>}
+        </div>
+        <div className={emailInputClasses}>
+          <label htmlFor="name">E-Mail Address</label>
+          <input
+            type="text"
+            id="name"
+            onChange={emailChangeHandler}
+            onBlur={emailBlurHandler}
+            value={emailValue}
+          />
+          {emailHasError && <p className="error-text">Invalid Email address</p>}
+        </div>
       </div>
 
-      <div className={emailInputClasses}>
-        <label htmlFor="name">E-Mail Address</label>
-        <input
-          type="text"
-          id="name"
-          onChange={emailChangeHandler}
-          onBlur={emailBlurHandler}
-          value={emailValue}
-        />
-        {emailHasError && <p className="error-text">Invalid Email address</p>}
-      </div>
       <div className="form-actions">
         <button disabled={!formIsValid}>Submit</button>
       </div>
